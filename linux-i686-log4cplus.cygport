@@ -1,0 +1,19 @@
+CROSS_HOST="i686-pc-linux-gnu"
+inherit cross
+
+NAME="linux-i686-log4cplus"
+VERSION=1.1.1-rc4
+RELEASE=1
+CATEGORY="Devel"
+SUMMARY="C++ logging library for Linux i686 toolchain"
+DESCRIPTION="log4cplus is a simple to use C++ logging API providing thread-safe,
+flexible, and arbitrarily granular control over log management and
+configuration. It is modelled after the Java log4j API."
+HOMEPAGE="http://log4cplus.sourceforge.net/"
+SRC_URI="mirror://sourceforge/log4cplus/log4cplus-stable/${VERSION%-rc*}/log4cplus-${VERSION}.tar.xz"
+SRC_DIR="log4cplus-${VERSION}"
+
+ACLOCAL_FLAGS="-I m4"
+CYGCONF_ARGS="--enable-threads=yes --with-working-c-locale"
+
+KEEP_LA_FILES="none"
